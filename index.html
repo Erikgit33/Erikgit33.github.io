@@ -8,40 +8,72 @@
 </head>
 
 <body>
-    <h1><strong>Website</strong></h1>
-    <p>This is a website. <strong><a href = "https://github.com/Erikgit33/Erikgit33.github.io" target = "_blank"> Here</a></strong> 
-    is the link to its GitHub page. 
-    </p>
+    <h1 style = "text-align:center"><strong>Website</strong></h1>
+    <p style = "text-align:center">This is a website. <strong><a href = "https://github.com/Erikgit33/Erikgit33.github.io" target = "_blank"> Here</a></strong> 
+    is the link to its GitHub page.
+    </p> 
     <hr>
-    <img src = "https://www.adweek.com/wp-content/uploads/2017/12/pacman-PAGE-2017.gif?w=1240"
-    alt = "Pacman" style = "width:200px; height:100px;">
-    <p>Down below is a video of how the Pac-Man ghosts pathfinding works, 
+    <br>
+
+    <!--pacman and his food-->
+    <svg width = "900" height = "100">
+        <circle cx = "150" cy = "50" r = "45" style = "fill:yellow;stroke:black;stroke-width:5"></circle>
+        <!--Mouth and eye-->
+        <polygon points = "152,51 192,68 192,40" style = "fill:black;stroke:black"></polygon>
+        <circle cx = "160" cy = "27" r = "5" style = "fill:black;stroke:black"></circle>
+        <!--Food-->
+        <circle cx = "210" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "240" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "270" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "300" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "330" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "360" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "390" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "420" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <circle cx = "900" cy = "50" r = "3" style = "fill:yellow;stroke:gray"></circle>
+        <!--Ghost-->
+        <circle cx = "45" cy = "45" r = "40" style = "fill:red;stroke:black;stroke-width:5"></circle>
+    </svg>
+
+    <br>
+    <br>
+    <hr>
+
+    <p>Down below is a video of how the Pac-Man ghost's pathfinding works, 
        how they calculate the path to chase pacman with along with how the game works in general. 
        I've found it very useful when coding my pacman copy, so I thought i'd share it.
     </p>
+
+    <!--Youtube video-->
     <iframe name = "Video_pacmanGhosts" width="550" height="315" src="https://www.youtube.com/embed/ICwzQ0_RCcQ?si=VOTWcB0rzW2wWk8g" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen ></iframe>
     <br>
+
+    <!--Ordered list-->
     <p>Pac-Man is a fun game because of many reasons, I have listed some here:
         <ol>
             <li>It's retro</li>
             <li>It's a classic</li>
             <li>The ghosts are cute</li>
-            <li>The orange ghost is called Clyde, he's very cute :)</li>
+            <li>The ghosts have mames! (The orange one is called Clyde :P)</li>
             <li>You recognize the intro music</li>
         </ol>
         I mean, just listen to this intro, it's perfect!
     </p>
+
+    <!--Audio-->
     <audio controls>
         <source src = "pacman_beginning.wav">
     </audio>
 
     <p>Pac-Man was created by the Japanese video game designer Toru Iwatani. 
-        Here is an overview of his life and work:
+        Here is a a quick and simple overview of his life and work:
     </p>
     <hr>
+
+    <!--Table-->
     <table> 
         <tr>
             <th>Born</th>
@@ -54,10 +86,10 @@
             <td>Tokyo Metropolitan University High School, 
                 Tokai University Faculty of Engineering</td>
             <td>Namco</td>
-            <td>Pac-Man</td>
+            <td>Pac-Man (Who could've guessed that, right?)</td>
         </tr>
     </table>
     <hr>
-    <p>(I also want myself to learn CSS)</p>
+    <p>(I know, I also want myself to learn CSS)</p>
 </body>
 </html>
