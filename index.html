@@ -13,7 +13,7 @@
     is the link to its GitHub page.
     </p> 
 
-    <hr style = "border:4px solid black">
+    <hr style = "border:3px solid black">
     <br>
 
     <!--SVG-->
@@ -36,9 +36,23 @@
     <br>
     <br>
 
-    <hr style = "border:4px solid black">
-    <br>
+    <hr style = "border:3px solid black">
 
+    <h2 id="header_welcome" style="text-align:center"></h2>
+    <script>
+        function getParameterByKey(key) {
+            const queryString = window.location.search;
+            if (new URLSearchParams(queryString).get(key) == null) {
+                return "User";
+            }
+            else {
+                return new URLSearchParams(queryString).get(key);
+            }
+        }
+        document.getElementById('header_welcome').innerHTML = "Welcome, " + getParameterByKey('fname') + "!";
+    </script>
+
+    <br>
     <p style = "text-align:center;border-radius:10cap">Down below is a video of how the Pac-Man ghost's pathfinding works, 
        how they calculate the path to chase pacman with along with how the game works in general. 
        I've found it very useful when coding my pacman copy, so I thought I'd share it. Enjoy!
@@ -51,7 +65,7 @@
     allowfullscreen ></iframe>
     <br>
 
-    <!--Ordered list-->
+    <!--List-->
     <p>Pac-Man is a fun game because of many reasons, I have listed some here:
         <ol>
             <li>It's retro</li>
@@ -72,8 +86,8 @@
     <br>
     <br>
 
-    <p>Pac-Man was created by the Japanese video game designer Toru Iwatani. 
-        Here is a a quick and simple overview of his life and work:
+    <p>Pac-Man was created by the Japanese video game designer Toru Iwatani and was released 22th May 1980. <br>
+       Here is a a quick and simple overview of his life and work:
     </p>
     <hr>
 
