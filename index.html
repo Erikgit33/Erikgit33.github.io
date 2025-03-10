@@ -38,6 +38,7 @@
 
     <hr style = "border:3px solid black">
 
+    <!--JavaScript-->
     <h2 id="header_welcome" style="text-align:center"></h2>
     <script>
         function getParameterByKey(key) {
@@ -49,7 +50,7 @@
                 return new URLSearchParams(queryString).get(key);
             }
         }
-        document.getElementById('header_welcome').innerHTML = "Welcome, " + getParameterByKey('fname') + "!";
+        document.getElementById('header_welcome').innerHTML = "Welcome to my website, " + getParameterByKey('fname') + "!";
     </script>
 
     <br>
