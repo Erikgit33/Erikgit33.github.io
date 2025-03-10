@@ -43,7 +43,7 @@
     <script>
         function getParameterByKey(key) {
             const queryString = window.location.search;
-            if (new URLSearchParams(queryString).get(key) == null) {
+            if (new URLSearchParams(queryString).get(key) == null || new URLSearchParams(queryString).get(key) == "" || new URLSearchParams(queryString).get(key) == " ") {
                 return "User";
             }
             else {
@@ -54,9 +54,9 @@
     </script>
 
     <br>
-    <p style = "text-align:center;border-radius:10cap">Down below is a video of how the Pac-Man ghost's pathfinding works, 
-       how they calculate the path to chase pacman with along with how the game works in general. 
-       I've found it very useful when coding my pacman copy, so I thought I'd share it. Enjoy!
+    <p style = "text-align:center;border-radius:10cap">Down below is a video of how Pac-Man works in depth, as well as going through 
+        how the ghost's pathfinding works, how they calculate the path to chase pacman with along with how the game works in general. 
+        I've found it very useful when coding my pacman copy, so I thought I'd share it. Enjoy!
     </p>
 
     <!--Youtube video-->
