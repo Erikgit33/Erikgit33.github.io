@@ -9,9 +9,13 @@
 
 <body>
     <h1 style = "text-align:center;font-size:300%"><b>Website</b></h1>
-    <p style = "text-align:center;font-size:120%">This is a website. <b><a href = "https://github.com/Erikgit33/Erikgit33.github.io" target = "_blank"> Here</a></b> 
+    <div style = "text-align:center;font-size:120%">This is a website. 
+        <!--Div-->
+        <a href = "https://github.com/Erikgit33/Erikgit33.github.io" target = "_blank">
+            <span style="color: red; font-weight: bold;">Here</span>
+        </a> 
     is the link to its GitHub page.
-    </p> 
+    </div> 
 
     <hr style = "border:3px solid black">
     <br>
@@ -43,7 +47,7 @@
     <script>
         function getParameterByKey(key) {
             const queryString = window.location.search;
-            if (new URLSearchParams(queryString).get(key) == null || new URLSearchParams(queryString).get(key) == "" || new URLSearchParams(queryString).get(key) == " ") {
+            if (new URLSearchParams(queryString).get(key) == null || new URLSearchParams(queryString).get(key) == "") {
                 return "User";
             }
             else {
