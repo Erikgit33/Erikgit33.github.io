@@ -1,62 +1,100 @@
 * {
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
     box-sizing:border-box;
 }
 body {
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
 }
 header {
-    background-color: #ccbbdd;
-    text-align: center;
-    font-size:30px;
-    padding: 10px;
+    background-color:#ccbbdd;
+    text-align:center;
+    font-size:185%;
+    padding:10px;
+    line-height:35%
 }
 section::after {
-    content: "";
-    display: table;
-    clear: both;
+    content:"";
+    display:table;
+    clear:both;
 }
 nav {
     float: left;
-    padding-top: 35px;
-    padding-bottom: 35px;
     width:25%;
-    height: auto;
-    background-color: #ccc;
+    height:auto;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:#ccc;
+    ul {
+        list-style-type: none;
+        margin: auto;
+        border-left-color:grey;
+        border-left-style:solid;
+        border-left-width:20px;
+    }
+    li {
+        padding: 2px;  
+        font-size:15px;
+    }
 }
 article {
     float:left;
-    padding: 15px;
-    width: 75%;
-    height: auto;
-    background-color: #ccc;
+    padding:15px;
+    padding-top:0;
+    width:75%;
+    height:auto;
+    border-color:black;
+    border-width:5px;
+    border-radius:0px;
+    border-style:outset;
+    background-color:#ccc;
+    h1 {
+        height:0;
+        text-decoration-line:underline;
+    }
 }
 footer {
     background-color: #ccbbdd;
     font-size: 20px;
     padding: 10px;
 }
-@media(max-width: 600px) {
+@media(min-width: 850px) {
+    nav {
+        li {
+            display:inline;
+        }
+    }
+}
+@media(max-width: 620px) {
+    header {
+        h1 {
+            font-size: 165%;
+        }
+        p {
+            font-size: 85%;
+        }
+    }
     article {
         width: 100%;
         height: auto;
         padding-top: 0;
     } 
     nav {
-        padding-top: 35px;
+        padding-top:20px;
         width: 100%;
         height: auto;
         text-align: center;
+        ul {
+            padding-bottom:5px;
+            border-left-width:0;
+            border-bottom:grey;
+            border-bottom-style:solid;
+            border-bottom-width:10px;
+        }
+        li {
+            display: inline;
+            font-size:20px;
+        }
     }
-    li {
-        display: inline;
-    }
 }
-ul {
-    list-style-type: none;
-    margin: auto;
-}
-li {
-    padding: 2px;  
-}
+
