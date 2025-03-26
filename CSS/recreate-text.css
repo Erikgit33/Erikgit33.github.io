@@ -1,0 +1,36 @@
+div {
+    max-width:fit-content;
+    height:auto;
+}
+p {
+    padding:10px;
+}
+p.fire {
+    background-color:black;
+    color:red;
+    font-size:80px;
+    font-weight:bold;
+    text-shadow: 0px 0px 15px #FF0000, 
+                 0px 0px 25px #FF0000,
+                 0px 0px 40px #FF0000;
+}
+p.neon {
+    padding:30px;
+    padding-left:60px;
+    padding-right:60px;
+    background-color:black;
+    color:#FFDDDD;
+    font-size:100px;
+    font-family: "quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-shadow: 0px 0px 5px #FFFFFF, 
+                 0px 0px 10px #ff44FF, 
+                 0px 0px 60px #FF44FF,
+                 0px 0px 80px #FF44FF,
+                 0px 0px 80px #FF44FF;
+}
+p.elegant {
+    
+}
