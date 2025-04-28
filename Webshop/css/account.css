@@ -8,3 +8,38 @@ body {
     border:5px solid #777;
     margin:0;
 }
+.container {
+    display:grid;
+    grid-template-areas:
+    "username"
+    "contactinfo"
+    "preferences"
+}
+.username, .email, .password {
+    text-align:center;
+    border:solid #333 3px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="radio"],
+input[type="checkbox"],
+input[type="submit"] {
+    margin: 0 8px 8px 8px;
+    padding:8px;
+    border-radius:8px;
+}
+label {
+    display:block;
+    font-size:130%;
+}
+i.required {
+    display:block;
+    margin:0;
+    font-size:80%;
+}
+
+
+@media screen and (min-width: 700px) {
+
+}
