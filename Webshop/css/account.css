@@ -1,0 +1,10 @@
+* {
+    font-family:"Quicksand", sans-serif;
+    box-sizing: border-box;
+    font-weight:bold;
+}
+body {
+    background-color:#ddd;
+    border:5px solid #777;
+    margin:0;
+}
