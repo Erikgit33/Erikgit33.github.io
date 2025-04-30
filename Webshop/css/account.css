@@ -8,26 +8,69 @@ body {
     border:5px solid #777;
     margin:0;
 }
-.container {
-    display:grid;
-    grid-template-areas:
-    "username"
-    "contactinfo"
-    "preferences"
+form {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
 }
-.username, .email, .password {
-    text-align:center;
+.username, .password, .email, .phonenumber {
     border:solid #333 3px;
+    text-align:center;
+}
+.username {
+    flex-basis:50%;
+}
+.password {
+    flex-basis:50%;
+}
+.infohandling {
+    flex-basis:100%;
+    border:solid #333 3px;
+    padding:10px;
+    font-size:80%;
+    text-align:center;
+}
+.email {
+    flex-basis:50%;
+}
+.phonenumber {
+    flex-basis:50%;
+}
+.preferences {
+    flex-basis:100%;
+    border:solid #333 3px;
+    padding:10px;
+    text-align:left;
 }
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="radio"],
 input[type="checkbox"],
-input[type="submit"] {
+input[type="submit"],
+input[type="select"] {
     margin: 0 8px 8px 8px;
     padding:8px;
     border-radius:8px;
+}
+input[type="checkbox"].preferences {
+    font-size:80%;
+}
+input[type="tel"] {
+    margin: 0 8px 8px 0px;
+    padding:8px;
+    border-radius:8px;
+    max-width:140px;
+}
+input[type="number"].tel {
+    font-size:80%;
+    max-width:50px;
+    border-radius:8px;
+}
+.emailInfo, .phonenumberInfo {
+    display:block;
+    font-size:70%;
+    margin-bottom:6px;
 }
 label {
     display:block;
@@ -40,6 +83,8 @@ i.required {
 }
 
 
-@media screen and (min-width: 600px) {
-
+@media screen and (min-width: 700px) {
+    .infohandling {
+        font-size:100%;
+    }
 }

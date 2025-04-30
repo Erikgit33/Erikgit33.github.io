@@ -9,14 +9,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div Class="container">
-        <form action="../index.html" method="post">
-            <div Class="username">
-                <label for="username">Username</label>
-                <i Class="required">Required</i>
-                <input type="text" id="username" name="username" required>
-            </div>
-        </form>
-    </div>
+    <form action="../index.html" method="post">
+        <div Class="username">
+            <label for="username">Username</label>
+            <i Class="required">Required</i>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div Class="password">
+            <label for="password">Password</label>
+            <i Class="required">Required</i>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div Class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="yourname@gmail.com">
+            <span Class="phonenumberInfo"><i>Supports any legitimate mail address</i></span>
+        </div>
+        <div Class="phonenumber">
+            <label for="phonenumber">Phone Number</label>
+            <p style="font-size:80%;display:inline">+</p>
+            <input type="number" id="numcountry" name="numcountry" Class="tel" min="0" max="998" value="0" step="1" list="countrycodes">
+            <p style="font-size:100%;display:inline">-</p>
+            <input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}" placeholder="X12-345-6789">
+            <span Class="emailInfo"><i>Format: X12-345-6789</i></span>
+        </div>
+        <div Class="infohandling">
+            <i>PetNest respects your privacy and integrity and handles the information you entrust us with with care, and will not share it with others or by other means break any laws working towards protecting said integrity.</i>
+        </div>
+        <div Class="preferences">
+            <h2 style="margin:10px 0px 10px 0px;">Preferences</h2>
+            <label for="preferenceNews">Newsletter</label>
+            <span>Subscribe to our newsletter for weekly updates and offers. You will also get recommendation mails from us if we find any new products that fit your pet's or your needs!</span>
+            <input type="checkbox" id="preferenceNews" Class="prefereneNews" name="preferenceNews">
+            <label for="preferencePet" style="margin-top:10px;">Favourite Pet</label>
+            <select id="preferencePet" Class="preferencePet" name="preferencePet">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="other">Other</option>
+                <option value="All">All of the above</option>
+            <p>By telling us which pet is your favourite, we'll be able to recommend you productsts tailored specifically to your liking!</p>
+        </div>
+    </form>
 </body>
 </html>
