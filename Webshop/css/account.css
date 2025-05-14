@@ -13,8 +13,13 @@ form {
     flex-direction:row;
     flex-wrap:wrap;
 }
-.username, .password, .email, .phonenumber {
+div {
     border:solid #333 3px;
+}
+
+/*info*/
+
+.username, .password, .email, .phonenumber {
     text-align:center;
 }
 .username {
@@ -23,37 +28,16 @@ form {
 .password {
     flex-basis:50%;
 }
-.infohandling {
-    flex-basis:100%;
-    border:solid #333 3px;
-    padding:10px;
-    font-size:80%;
-    text-align:center;
-}
 .email {
     flex-basis:50%;
 }
 .phonenumber {
     flex-basis:50%;
 }
-.preferences {
-    flex-basis:100%;
-    border:solid #333 3px;
-    padding:10px;
-    text-align:left;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="radio"],
-input[type="checkbox"],
-input[type="submit"],
-input[type="select"] {
-    margin: 0 8px 8px 8px;
-    padding:8px;
-    border-radius:8px;
-}
-input[type="checkbox"].preferences {
+i.required {
+    text-align:center;
+    display:block;
+    margin:0;
     font-size:80%;
 }
 input[type="tel"] {
@@ -72,14 +56,69 @@ input[type="number"].tel {
     font-size:70%;
     margin-bottom:6px;
 }
-label {
+label.info {
     display:block;
     font-size:130%;
+    margin-top:10px;
 }
-i.required {
-    display:block;
-    margin:0;
+.infohandling {
+    flex-basis:100%;
+    
+    padding:10px;
     font-size:80%;
+    text-align:center;
+}
+
+div.submit {
+    flex-basis:100%;
+    text-align:center;
+    padding:10px;
+    input {
+        margin:0;
+    }
+}
+
+/*preferences*/
+
+div.preferences {
+    flex-basis:100%;
+    padding:10px;
+    text-align:left;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="checkbox"],
+input[type="submit"],
+input[type="select"] {
+    margin: 0 8px 8px 8px;
+    padding:8px;
+    border-radius:8px;
+    display:inline;
+}
+input[type="checkBox"]:hover {
+    cursor:pointer;
+}
+div.petAtHomeInfo {
+    border:none;
+    display:inline;
+    select {
+        display:none;
+    }
+}
+div.petAtHomeInfo input[type="checkbox"]:checked {
+    select {
+        display:inline;
+    }
+}   
+
+label.preferences {
+    display:inline-block;
+    font-size:130%;
+    margin-top:15px;
+}
+span.preferences {
+    display:block;
 }
 
 
