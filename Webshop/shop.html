@@ -4,33 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetNest - Shop</title>
+    <!--CSS-->
     <link rel ="stylesheet" href="css/shop.css">
+    <!--JavaScript-->
+    <script src="js/index.js"></script>
     <!--From google fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
 <body>
     <div Class="container">
         <div Class="header">
             <div Class="logo">
+                <svg Class="accountPaw">
+                    <!--Paw-->
+                    <circle cx="100%" cy="0" r="120" stroke="#59420b" stroke-width="3" fill="#59420b"></circle>
+                </svg>
+                <div Class="account">
+                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon">
+                    <br>
+                    <span Class="loggedIn" id="loggedIn"></span>
+                </div> 
                 <img src="images/petNest-logo.png" alt="PetNest Logo" Class="logo">
             </div>
             <h2>PetNest, for all your pet needs!</h2>
-            <hr>
-            <div Class="nav">
-                <a Class="home" href="../index.html">Home</a>
-                <a href="about-us.html">About</a>
-                <a Class="shop" href="shop.html" Class="shop">Shop</a>
-                <a href="contact-us.html">Contact</a>
-                <a href="login.html">Login</a>
-            </div>
-            <hr style="margin-bottom:0">
         </div>
-        <div Class="main"> 
-            <p>Shop at PetNest</p>
+        <div Class="nav">
+            <a href="../index.html">Home</a>
+            <a href="about-us.html">About</a>
+            <a href="shop.html" Class="shop">Shop</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="account.html">Account</a>
+        </div>
+        <div Class="main">
+            <div Class="search"> 
+                <select Class="category">
+                    <option value="all">All</option>
+                    <option value="dog">Dogs</option>
+                    <option value="cat">Cats</option>
+                    <option value="rabbit">Birds</option>
+                    <option value="toy">Toys</option>
+                    <option value="food">Food</option>
+                    <option value="equipment">Equipment</option>
+                </select>
+                <input type="text" placeholder="Search for pets & products..." Class="searchBar">  
+                <span class="material-symbols-outlined" id="searchIcon">
+                    search
+                </span>
+            </div>
+            <div Class="pets">
+                <div Class="pet">
+                    <img src="images/pets/dogs/Doggen.png" alt="Doggen" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Doggen</h3>
+                        <p>Breed: Unkown</p>
+                        <p>Likes: Eating poop</p>
+                        <p>Age: ~4 years</p>
+                        <p>Price: $500</p>
+                        <p>Location: New York</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="pet">
+                    <img src="images/pets/dogs/akita-dog.png" alt="Akita Dog" Class="petImage" Class="dog">
+                </div>
+                <div Class="pet">
+                    <img src="images/pets/dogs/american-cattle-dog.png" alt="American Cattle Dog" Class="petImage" Class="dog">
+                </div>
+                <div Class="pet">
+                    <img src="images/pets/dogs/american-foxhound.png" alt="American Foxhound" Class="petImage" Class="dog">
+                </div>
+                <div Class="pet">
+                    <img src="images/pets/dogs/barbado-da-terceira.png" alt="Barbado da Terceira" Class="petImage" Class="dog">
+                </div>
+                <div Class="pet">
+                    <img src="images/pets/dogs/basset-hound.png" alt="Basset Hound" Class="petImage" Class="dog">
+                </div>
+                <div Class="pet">
+                    <img src="images/pets/dogs/labrador-retriever-puppy.png" alt="Labrador Retriever" Class="petImage" Class="dog">
+                </div>
+            </div>
         </div>
         <div Class="footer">
             <p>&copy; 2025 PetNest. All rights reserved.</p>
         </div>
     </div>
 </body>
+    
+<!--JavaScript-->
+<script>
+    username = getParameterByKey('username');
+    if (username != null) 
+    {
+        document.getElementById('loggedIn').innerHTML = username;
+    }
+    else 
+    {
+        document.getElementById('loggedIn').innerHTML = "Not logged in";
+    }
+
+    document.getElementById('accountIcon').onclick = transferParameters("account.html");
+</script>
 </html>

@@ -24,6 +24,7 @@
                 </svg>
                 <div Class="account">
                     <img src="webshop/images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon">
+                    <br>
                     <span Class="loggedIn" id="loggedIn"></span>
                 </div> 
                 <img src="webshop/images/petNest-logo.png" alt="PetNest Logo" Class="logo">
@@ -35,7 +36,7 @@
             <a href="webshop/about-us.html">About</a>
             <a href="webshop/shop.html" Class="shop">Shop</a>
             <a href="webshop/contact-us.html">Contact</a>
-            <a href="webshop/account.html">Account</a>
+            <a href="webshop/account.html" id="accountLink">Account</a>
         </div>
         <div Class="main">
             <p>We at PetNest work for the better health and wellbeing for both owners and pets. We stand for equal love
@@ -45,7 +46,7 @@
             <p>&copy; 2025 PetNest. All rights reserved.</p>
         </div>
     </div>
-
+</body>
     <!--JavaScript-->
 
     <script>
@@ -54,10 +55,10 @@
             document.getElementById('loggedIn').innerHTML = username;
         }
         else {
-            document.getElementById('loggedIn').innerHTML = null;
+            document.getElementById('loggedIn').innerHTML = "Not logged in";    
         }
 
         document.getElementById('accountIcon').onclick = transferParameters("webshop/account.html");
+        document.getElementById('accountLink').onclick = transferParameters("webshop/account.html");
     </script>
-</body>
 </html>

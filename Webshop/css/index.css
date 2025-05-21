@@ -57,7 +57,7 @@ body {
                 cursor: pointer;
             }
             span.loggedIn {
-                font-size: 80%;
+                font-size: 70%;
                 color:#ccc;
             }
         }
@@ -65,19 +65,19 @@ body {
 }
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
     border-top: 5px solid #777;
     border-bottom: 5px solid #777; 
     padding: 10px 0px 10px 0px;
     a {
+        text-align:center;
         padding: 20px 20px;
         text-decoration: none;
         color: #fff;
         background-color: #333;
-        border-radius: 5px;
-        font-size: 90%;
-        flex-basis:20px;
+        border-radius: 20px;
+        flex-basis:140px;
         flex-shrink:1;
     }
     a.shop {
@@ -101,4 +101,10 @@ body {
     text-align: center;
     border-top:3px solid #777;
     background-color:#724F00;
+}
+
+@media (min-width: 800px) {
+    .nav {
+        justify-content: space-around;
+    }
 }
