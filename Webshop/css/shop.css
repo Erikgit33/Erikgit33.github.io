@@ -23,9 +23,9 @@ body {
     grid-area: header;
     text-align:center;
 
-    div.logo {
+    & > div.logo {
         position:relative;
-        img.logo {
+        & > img.logo {
             margin-top: 22px;
             max-width: 300px;
             max-height:300px;
@@ -35,14 +35,14 @@ body {
             margin-left: auto;
             margin-right: auto;
         }
-        svg.accountPaw {
+        & > svg.accountPaw {
             position:absolute;
             top: 0px;   
             right:0px;
             width:140px;
             height:140px;
         }   
-        div.account {
+        & > div.account {
             display:block;
             position:absolute;
             width:auto;
@@ -51,14 +51,14 @@ body {
             top: 10px;
             padding:0px;
             
-            .accountIcon {
+            & > .accountIcon {
                 max-width:70px;
                 max-height: 70px;
             }
-            .accountIcon:hover {
+            & > .accountIcon:hover {
                 cursor: pointer;
             }
-            span.loggedIn {
+            & > span.loggedIn {
                 font-size: 70%;
                 color:#ccc;
             }
@@ -72,7 +72,7 @@ body {
     border-top: 5px solid #777;
     border-bottom: 5px solid #777; 
     padding: 10px 0px 10px 0px;
-    a {
+    & > a {
         text-align:center;
         padding: 20px 20px;
         text-decoration: none;
@@ -82,12 +82,12 @@ body {
         flex-basis:140px;
         flex-shrink:1;
     }
-    a.shop {
+    & > a.shop {
         padding: 10px 20px;
         font-size:220%;
         background-color:#724F00
     }
-    a:hover {
+    & a:hover {
         background-color: #555;
         color:#ddd;
     }
@@ -96,18 +96,22 @@ body {
 
 .main {
     grid-area: main;
-    div.search {
+    & div.search {
         display:flex;
         justify-content: center;
-        .category {
+        & select.category {
             margin:15px;
             margin-top:25px;
             width:15%;
             max-width:160px;
-            font-size:120%;
+            font-size:110%;
             border-radius:8px;
+            option {
+                font-size:90%;
+            }
         }
-        .searchBar {
+
+        & .searchBar {
             margin:15px;
             margin-top:25px;
             width:60%;
@@ -115,7 +119,7 @@ body {
             font-size:120%;
             border-radius:10px;
         }
-        .material-symbols-outlined {
+        & .material-symbols-outlined {
             margin-top:27px;
             Cursor: pointer;
             font-size:165%;
@@ -127,7 +131,7 @@ body {
         }
     }
 
-    div.pets {
+    div.petsContainer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -137,7 +141,7 @@ body {
         margin: 15px 0px 15px 0px;
         row-gap: 5vh;
 
-        div.pet {
+        & div.pet {
             flex-basis: 30%;
             border:5px solid #555;
             border-radius:15px;
@@ -146,39 +150,38 @@ body {
 
             width:fit-content;
             height:fit-content;
-            img.petImage {
+            & img.petImage {
                 border-bottom:5px solid #555; 
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
                 width:100%;
             }
-            div.petInfo {
-                h1, h2, h3, h4, h5, h6 {
+            & div.petInfo {
+                & h1, h2, h3, h4, h5, h6 {
                     margin:0px;
                     padding:0px;
                 }
-                .name {
+                & .name {
                     text-decoration:underline;
                 }
-                p {
+                & p {
                     margin:2.5%;
                     padding:0px;
                 }
                 text-align:center;
             }
 
-            button.contactSeller {
+            & button.contactSeller {
                 border-radius: 10px;
                 margin: 10px 0px 18px 0px;
                 Cursor:pointer;
-            }
-            button.contactSeller:hover {
-                background-color: #555;
-                color:#ddd;
+                &:hover {
+                    background-color: #555;
+                    color:#ddd;
+                }
             }
         }
-        
-        div.pet:hover {
+        &:hover {
             transform: scale(1.05);
             transition: transform 0.2s;
         }
