@@ -12,9 +12,9 @@ function transferParameters(nextPage) {
     const URLParameters = new URLSearchParams(window.location.search);
     const queryString = urlParameters.toString();
     if (queryString != "" && queryString != null) {
-        window.location.href = "http://127.0.0.1:5500/webshop/" + nextPage + "?" + queryString;
+        window.location.href = 'http://127.0.0.1:5500/webshop/' + nextPage + '?' + queryString;
     }
     else {
-        window.location.href = "http://127.0.0.1:5500/webshop/" + nextPage;
+        window.location.href = 'http://127.0.0.1:5500/webshop/' + nextPage;
     }
 }

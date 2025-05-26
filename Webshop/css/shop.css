@@ -163,7 +163,7 @@ img.petImage {
     border-top-right-radius: 10px;
     width:100%;
 }
-div.petInfo h1, h2, h3, h4, h5, h6 {
+div.petInfo h3 {
     margin:0px;
     padding:0px;
 }
