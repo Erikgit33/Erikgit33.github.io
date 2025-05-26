@@ -8,6 +8,7 @@ body {
     border:5px solid #777;
     margin:0;
 }
+
 .container {
     display: grid;
     grid-template-areas: 
@@ -19,50 +20,52 @@ body {
     grid-template-rows: auto auto auto;
     grid-template-columns: 100%;
 }
+
+
 .header {
     grid-area: header;
     text-align:center;
-
-    div.logo {
-        position:relative;
-        img.logo {
-            margin-top: 22px;
-            max-width: 300px;
-            max-height:300px;
-            border: 12px solid #eee;
-            border-radius: 150px;
-            box-shadow: 0px 0px 10px #777;
-        }
-        svg.accountPaw {
-            position:absolute;
-            top: 0px;   
-            right:0px;
-            width:140px;
-            height:140px;
-        }   
-        div.account {
-            display:block;
-            position:absolute;
-            width:auto;
-            height:auto;
-            right: 10px;
-            top: 10px;
-            padding:0px;
-            
-            .accountIcon {
-                max-width:70px;
-                max-height: 70px;
-            }
-            .accountIcon:hover {
-                cursor: pointer;
-            }
-            span.loggedIn {
-                font-size: 70%;
-                color:#ccc;
-            }
-        }
-    }
 }
+div.logo {
+    position:relative;
+}
+img.logo {
+    margin-top: 22px;
+    max-width: 300px;
+    max-height:300px;
+    border: 12px solid #eee;
+    border-radius: 150px;
+    box-shadow: 0px 0px 10px #777;
+}
+svg.accountPaw {
+    position:absolute;
+    top: 0px;   
+    right:0px;
+    width:140px;
+    height:140px;
+}   
+div.account {
+    display:block;
+    position:absolute;
+    width:auto;
+    height:auto;
+    right: 10px;
+    top: 10px;
+    padding:0px;
+}
+.accountIcon {
+    max-width:70px;
+    max-height: 70px;
+}
+.accountIcon:hover {
+    cursor: pointer;
+}
+span.loggedIn {
+    font-size: 70%;
+    color:#ccc;
+}
+    
+
 .nav {
     display: flex;
     justify-content: center;
@@ -70,38 +73,43 @@ body {
     border-top: 5px solid #777;
     border-bottom: 5px solid #777; 
     padding: 10px 0px 10px 0px;
-    a {
-        text-align:center;
-        padding: 20px 20px;
-        text-decoration: none;
-        color: #fff;
-        background-color: #333;
-        border-radius: 20px;
-        flex-basis:140px;
-        flex-shrink:1;
-    }
-    a.shop {
-        padding: 10px 20px;
-        font-size:220%;
-    }
-    a.home {
-        background-color:#59420b;
-    }
-    a:hover {
-        background-color: #555;
-        color:#ddd;
-    }
 }
+a {
+    text-align:center;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 20px;
+    flex-basis:140px;
+    flex-shrink:1;
+}
+a.shop {
+    padding: 10px 20px;
+    font-size:220%;
+}
+a.home {
+    background-color:#724F00
+}
+a:hover {
+    background-color: #555;
+    color:#ddd;
+}
+
+
 .main {
     grid-area: main;
     text-align: center;
 }
+
+
 .footer {
     grid-area: footer;
     text-align: center;
     border-top:3px solid #777;
     background-color:#724F00;
 }
+
 
 @media (min-width: 800px) {
     .nav {

@@ -73,12 +73,12 @@ div.submit {
     flex-basis:100%;
     text-align:center;
     padding:10px;
-    input {
+}
+.submitInput {
         margin:0;
         font-size:200%;
         Cursor:pointer;
     }
-}
 
 /*preferences*/
 
@@ -86,12 +86,12 @@ div.preferences {
     flex-basis:100%;
     padding:10px;
     text-align:left;
-
-    select {
-        padding: 4px 4px 2px 4px;
-        border-radius:8px;
-    }
 }
+div.preferences select {
+    padding: 4px 4px 2px 4px;
+    border-radius:8px;    
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -106,11 +106,11 @@ input[type="select"] {
 div.petAtHomeInfo {
     border:none;
     display:inline;
-    select {
-        display:none;
-    }
 }
-div.petAtHomeInfo input[type="checkbox"]:checked ~ select {
+select.petAtHomeType {
+    display:none;
+}
+div.petAtHomeInfo input[type="checkbox"]:checked ~ select.petAtHomeType {
     display:inline;
 }
 input[type="checkBox"]:hover {

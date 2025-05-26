@@ -19,52 +19,54 @@ body {
     grid-template-rows: auto auto auto;
     grid-template-columns: 100%;
 }
+
+
 .header {
     grid-area: header;
     text-align:center;
-
-    & > div.logo {
-        position:relative;
-        & > img.logo {
-            margin-top: 22px;
-            max-width: 300px;
-            max-height:300px;
-            border: 12px solid #eee;
-            border-radius: 150px;
-            box-shadow: 0px 0px 10px #777;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        & > svg.accountPaw {
-            position:absolute;
-            top: 0px;   
-            right:0px;
-            width:140px;
-            height:140px;
-        }   
-        & > div.account {
-            display:block;
-            position:absolute;
-            width:auto;
-            height:auto;
-            right: 10px;
-            top: 10px;
-            padding:0px;
-            
-            & > .accountIcon {
-                max-width:70px;
-                max-height: 70px;
-            }
-            & > .accountIcon:hover {
-                cursor: pointer;
-            }
-            & > span.loggedIn {
-                font-size: 70%;
-                color:#ccc;
-            }
-        }
-    }
 }
+div.logo {
+    position:relative;
+}
+img.logo {
+    margin-top: 22px;
+    max-width: 300px;
+    max-height:300px;
+    border: 12px solid #eee;
+    border-radius: 150px;
+    box-shadow: 0px 0px 10px #777;
+    margin-left: auto;
+    margin-right: auto;
+}
+svg.accountPaw {
+    position:absolute;
+    top: 0px;   
+    right:0px;
+    width:140px;
+    height:140px;
+}   
+div.account {
+    display:block;
+    position:absolute;
+    width:auto;
+    height:auto;
+    right: 10px;
+    top: 10px;
+    padding:0px;
+}            
+.accountIcon {
+    max-width:70px;
+    max-height: 70px;
+}
+.accountIcon:hover {
+    cursor: pointer;
+}
+span.loggedIn {
+    font-size: 70%;
+    color:#ccc;
+}
+
+
 .nav {
     display: flex;
     justify-content: center;
@@ -72,121 +74,120 @@ body {
     border-top: 5px solid #777;
     border-bottom: 5px solid #777; 
     padding: 10px 0px 10px 0px;
-    & > a {
-        text-align:center;
-        padding: 20px 20px;
-        text-decoration: none;
-        color: #fff;
-        background-color: #333;
-        border-radius: 20px;
-        flex-basis:140px;
-        flex-shrink:1;
-    }
-    & > a.shop {
-        padding: 10px 20px;
-        font-size:220%;
-        background-color:#724F00
-    }
-    & a:hover {
-        background-color: #555;
-        color:#ddd;
-    }
+}
+a {
+    text-align:center;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 20px;
+    flex-basis:140px;
+    flex-shrink:1;
+}
+a.shop {
+    padding: 10px 20px;
+    font-size:220%;
+    background-color:#724F00
+}
+a:hover {
+    background-color: #555;
+    color:#ddd;
 }
 
 
 .main {
     grid-area: main;
-    & div.search {
-        display:flex;
-        justify-content: center;
-        & select.category {
-            margin:15px;
-            margin-top:25px;
-            width:15%;
-            max-width:160px;
-            font-size:110%;
-            border-radius:8px;
-            option {
-                font-size:90%;
-            }
-        }
-
-        & .searchBar {
-            margin:15px;
-            margin-top:25px;
-            width:60%;
-            max-width:500px;
-            font-size:120%;
-            border-radius:10px;
-        }
-        & .material-symbols-outlined {
-            margin-top:27px;
-            Cursor: pointer;
-            font-size:165%;
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 500,
-            'GRAD' 0,
-            'opsz' 24
-        }
-    }
-
-    div.petsContainer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: start;
-        justify-content: space-around;
-        
-        margin: 15px 0px 15px 0px;
-        row-gap: 5vh;
-
-        & div.pet {
-            flex-basis: 30%;
-            border:5px solid #555;
-            border-radius:15px;
-            background-color:#eee;
-            text-align:center;
-
-            width:fit-content;
-            height:fit-content;
-            & img.petImage {
-                border-bottom:5px solid #555; 
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                width:100%;
-            }
-            & div.petInfo {
-                & h1, h2, h3, h4, h5, h6 {
-                    margin:0px;
-                    padding:0px;
-                }
-                & .name {
-                    text-decoration:underline;
-                }
-                & p {
-                    margin:2.5%;
-                    padding:0px;
-                }
-                text-align:center;
-            }
-
-            & button.contactSeller {
-                border-radius: 10px;
-                margin: 10px 0px 18px 0px;
-                Cursor:pointer;
-                &:hover {
-                    background-color: #555;
-                    color:#ddd;
-                }
-            }
-        }
-        &:hover {
-            transform: scale(1.05);
-            transition: transform 0.2s;
-        }
-    }
 }
+div.search {
+    display:flex;
+    justify-content: center;
+}
+select.category {
+    margin:15px;
+    margin-top:25px;
+    width:15%;
+    max-width:160px;
+    font-size:110%;
+    border-radius:8px;
+}
+option.categoryOption {
+    font-size:90%;
+}
+.searchBar {
+    margin:15px;
+    margin-top:25px;
+    width:60%;
+    max-width:500px;
+    font-size:120%;
+    border-radius:10px;
+}
+.material-symbols-outlined {
+    margin-top:27px;
+    Cursor: pointer;
+    font-size:165%;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+div.productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    justify-content: space-around;
+        
+    margin: 15px 0px 15px 0px;
+    row-gap: 5vh;
+}
+div.product {
+    flex-basis: 30%;
+    border:5px solid #555;
+    border-radius:15px;
+    background-color:#eee;
+    text-align:center;
+
+    width:fit-content;
+    height:fit-content;
+}
+div.pet:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+img.petImage {
+    border-bottom:5px solid #555; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width:100%;
+}
+div.petInfo h1, h2, h3, h4, h5, h6 {
+    margin:0px;
+    padding:0px;
+}
+.name {
+    text-decoration: underline;
+}
+div.petInfo p {
+    margin:2.5%;
+    padding:0px;
+}
+button.contactSeller {
+    border-radius: 10px;
+    margin: 10px 0px 18px 0px;
+    Cursor:pointer;
+}
+button.contactSeller:hover {
+    background-color: #555;
+    color:#ddd;
+}
+
+div.productContainer select.category {
+
+}
+
 .footer {
     grid-area: footer;
     text-align: center;
@@ -194,18 +195,22 @@ body {
     background-color:#724F00;
 }
 
+
 @media screen and (max-width: 600px) {
     .nav {
         font-size:90%;
+    }
+
+    div.product {
+        font-size:80%;
     }
 }
 @media screen and (min-width: 800px) {
     .nav {
         justify-content: space-around;
     }
-}
-@media screen and (min-width: 1000px) {
-    div.pet {
+
+    div.product {
         flex-basis:22.5%;
     }
 }
