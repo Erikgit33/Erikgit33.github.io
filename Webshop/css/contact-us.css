@@ -111,7 +111,12 @@ a:hover {
 }
 
 
-@media (min-width: 800px) {
+@media screen and (max-width: 600px) {
+    .nav {
+        font-size:90%;
+    }
+}
+@media screen and (min-width: 800px) {
     .nav {
         justify-content: space-around;
     }

@@ -74,7 +74,7 @@ span.loggedIn {
     border-bottom: 5px solid #777; 
     padding: 10px 0px 10px 0px;
 }
-a {
+.nav a {
     text-align:center;
     padding: 20px 20px;
     text-decoration: none;
@@ -84,14 +84,14 @@ a {
     flex-basis:140px;
     flex-shrink:1;
 }
-a.shop {
+.nav a.shop {
     padding: 10px 20px;
     font-size:220%;
 }
-a.home {
+.nav a.home {
     background-color:#724F00
 }
-a:hover {
+.nav a:hover {
     background-color: #555;
     color:#ddd;
 }
@@ -111,8 +111,14 @@ a:hover {
 }
 
 
-@media (min-width: 800px) {
+@media screen and (max-width: 600px) {
+    .nav {
+        font-size:90%;
+    }
+}
+@media screen and (min-width: 800px) {
     .nav {
         justify-content: space-around;
     }
 }
+
