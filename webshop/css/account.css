@@ -17,7 +17,9 @@ div {
     border:solid #333 3px;
 }
 
+
 /*info*/
+
 
 .username, .password, .email, .phonenumber {
     text-align:center;
@@ -64,23 +66,35 @@ label.info {
 .infohandling {
     flex-basis:100%;
     
-    padding:10px;
+    padding:10px 10px 22px 10px;
     font-size:80%;
     text-align:center;
 }
 
 div.submit {
+    position:relative;
     flex-basis:100%;
     text-align:center;
     padding:10px;
 }
-.submitInput {
-        margin:0;
-        font-size:200%;
-        Cursor:pointer;
-    }
+div.submit .submitInput {
+    margin:0;
+    font-size:200%;
+    padding:8px;
+    border-radius:8px;
+    display:inline;
+    Cursor:pointer;
+}
+div.submit .catImg {
+    position:absolute;
+    max-height:125px;
+    bottom:-12px;
+    left:24%;
+}
+
 
 /*preferences*/
+
 
 div.preferences {
     flex-basis:100%;
@@ -96,7 +110,6 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="checkbox"],
-input[type="submit"],
 input[type="select"] {
     margin: 0 8px 8px 8px;
     padding:8px;

@@ -66,6 +66,7 @@ span.loggedIn {
     color:#ccc;
 }
 
+/*nav*/
 
 .nav {
     display: flex;
@@ -95,6 +96,7 @@ span.loggedIn {
     color:#ddd;
 }
 
+/*main*/
 
 .main {
     grid-area: main;
@@ -184,9 +186,7 @@ button.contactSeller:hover {
     color:#ddd;
 }
 
-div.productContainer select.category {
-
-}
+/*footer */
 
 .footer {
     grid-area: footer;
@@ -212,5 +212,10 @@ div.productContainer select.category {
 
     div.product {
         flex-basis:22.5%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    div.product {
+        flex-basis:18%;
     }
 }

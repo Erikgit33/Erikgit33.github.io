@@ -21,7 +21,7 @@
                     <circle cx="100%" cy="0" r="120" stroke="#59420b" stroke-width="3" fill="#59420b"></circle>
                 </svg>
                 <div Class="account">
-                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon">
+                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon" onclick="transferParameters('account.html')">
                     <br>
                     <span Class="loggedIn" id="loggedIn"></span>
                 </div> 
@@ -53,7 +53,7 @@
                 </span>
             </div>
             <div Class="productContainer">
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/Doggen.png" alt="Doggen" Class="petImage">
                     <div Class="petInfo">
                         <h3 Class="name">Doggen</h3>
@@ -65,7 +65,7 @@
                     </div>
                     <button Class="contactSeller">Contact seller(s)</button>
                 </div>
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/akita-dog.png" alt="Akita Dog" Class="petImage dog">
                     <div Class="petInfo">
                         <h3 Class="name">Doggen</h3>
@@ -77,19 +77,19 @@
                     </div>
                     <button Class="contactSeller">Contact seller(s)</button>
                 </div>
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/american-cattle-dog.png" alt="American Cattle Dog" Class="petImage" Class="dog">
                 </div>
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/american-foxhound.png" alt="American Foxhound" Class="petImage" Class="dog">
                 </div>
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/barbado-da-terceira.png" alt="Barbado da Terceira" Class="petImage" Class="dog">
                 </div>
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/basset-hound.png" alt="Basset Hound" Class="petImage" Class="dog">
                 </div>
-                <div Class="product pet">
+                <div Class="product pet dog">
                     <img src="images/pets/dogs/labrador-retriever-puppy.png" alt="Labrador Retriever" Class="petImage" Class="dog">
                 </div>
             </div>
@@ -103,7 +103,7 @@
 <!--JavaScript-->
 <script>
     username = getParameterByKey('username');
-    if (username != null) 
+    if (username != null && username != "")
     {
         document.getElementById('loggedIn').innerHTML = username;
     }
@@ -111,7 +111,5 @@
     {
         document.getElementById('loggedIn').innerHTML = "Not logged in";
     }
-
-    document.getElementById('accountIcon').onclick = transferParameters("account.html");
 </script>
 </html>
