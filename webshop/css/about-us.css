@@ -21,6 +21,7 @@ body {
     grid-template-columns: 100%;
 }
 
+/*header*/
 
 .header {
     grid-area: header;
@@ -65,6 +66,7 @@ span.loggedIn {
     color:#ccc;
 }
     
+/*nav*/
 
 .nav {
     display: flex;
@@ -74,7 +76,7 @@ span.loggedIn {
     border-bottom: 5px solid #777; 
     padding: 10px 0px 10px 0px;
 }
-a {
+.nav a {
     text-align:center;
     padding: 20px 20px;
     text-decoration: none;
@@ -83,25 +85,28 @@ a {
     border-radius: 20px;
     flex-basis:140px;
     flex-shrink:1;
+    cursor:pointer;
 }
-a.shop {
+.nav a.shop {
     padding: 10px 20px;
     font-size:220%;
 }
-a.about-us {
+.nav a.about-us {
     background-color:#724F00
 }
-a:hover {
+.nav a:hover {
     background-color: #555;
     color:#ddd;
 }
 
+/*main*/
 
 .main {
     grid-area: main;
     text-align: center;
 }
 
+/*footer*/
 
 .footer {
     grid-area: footer;

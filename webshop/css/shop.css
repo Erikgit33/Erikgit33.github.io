@@ -20,6 +20,7 @@ body {
     grid-template-columns: 100%;
 }
 
+/*header*/
 
 .header {
     grid-area: header;
@@ -85,6 +86,7 @@ span.loggedIn {
     border-radius: 20px;
     flex-basis:140px;
     flex-shrink:1;
+    cursor:pointer;
 }
 .nav a.shop {
     padding: 10px 20px;

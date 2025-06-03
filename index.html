@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetNest - Home</title>
-    <!--CSS-->
+    <!--External CSS-->
     <link rel="stylesheet" href="webshop/css/index.css">
-    <!--JavaScript-->
+    <!--External JavaScript-->
     <script src="webshop/js/index.js"></script>
     <!--Google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap">
-    
 </head>
 <body>
     <div Class="container">
@@ -22,7 +21,7 @@
                     <circle cx="100%" cy="0" r="120" stroke="#59420b" stroke-width="3" fill="#59420b"></circle>
                 </svg>
                 <div Class="account">
-                    <img src="webshop/images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon">
+                    <img src="webshop/images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon" onclick="transferParameters('webshop/account.html')">
                     <br>
                     <span Class="loggedIn" id="loggedIn"></span>
                 </div> 
@@ -31,11 +30,11 @@
             <h2>PetNest, for all your pet needs!</h2>
         </div>
         <div Class="nav">
-            <a Class="home" href="index.html">Home</a>
-            <a href="webshop/about-us.html">About</a>
-            <a href="webshop/shop.html" Class="shop">Shop</a>
-            <a href="webshop/contact-us.html">Contact</a>
-            <a href="webshop/account.html" id="accountLink">Account</a>
+            <a onclick="transferParameters('index.html')"Class="home">Home</a>
+            <a onclick="transferParameters('webshop/about-us.html')">About</a>
+            <a onclick="transferParameters('webshop/shop.html')" Class="shop">Shop</a>
+            <a onclick="transferParameters('webshop/contact-us.html')">Contact</a>
+            <a onclick="transferParameters('webshop/account.html')">Account</a>
         </div>
         <div Class="main">
             <p>We at PetNest work for the better health and wellbeing for both owners and pets. We stand for equal love and treatment for all pets!</p>
@@ -44,7 +43,7 @@
             <p>&copy; 2025 PetNest. All rights reserved.</p>
         </div>
     </div>
-</body>
+
     <!--JavaScript-->
     <script>
         username = getParameterByKey('username');
@@ -54,7 +53,6 @@
         else {
             document.getElementById('loggedIn').innerHTML = "Not logged in";    
         }
-
-        document.getElementById('accountIcon').onclick = transferParameters("webshop/account.html");
     </script>
+</body>
 </html>

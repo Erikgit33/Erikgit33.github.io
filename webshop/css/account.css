@@ -17,9 +17,7 @@ div {
     border:solid #333 3px;
 }
 
-
 /*info*/
-
 
 .username, .password, .email, .phonenumber {
     text-align:center;
@@ -71,6 +69,8 @@ label.info {
     text-align:center;
 }
 
+/*submit*/
+
 div.submit {
     position:relative;
     flex-basis:100%;
@@ -92,9 +92,7 @@ div.submit .catImg {
     left:24%;
 }
 
-
 /*preferences*/
-
 
 div.preferences {
     flex-basis:100%;

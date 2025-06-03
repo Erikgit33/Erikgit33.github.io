@@ -20,7 +20,7 @@
                     <circle cx="100%" cy="0" r="120" stroke="#59420b" stroke-width="3" fill="#59420b"></circle>
                 </svg>
                 <div Class="account">
-                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon">
+                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon" onclick="transferParameters('account.html')">
                     <br>
                     <span Class="loggedIn" id="loggedIn"></span>
                 </div> 
@@ -43,20 +43,18 @@
             <p>&copy; 2025 PetNest. All rights reserved.</p>
         </div>
     </div>
-</body>
-    
-<!--JavaScript-->
-<script>
-    username = getParameterByKey('username');
-    if (username != null) 
-    {
-        document.getElementById('loggedIn').innerHTML = username;
-    }
-    else 
-    {
-        document.getElementById('loggedIn').innerHTML = "Not logged in";
-    }
 
-    document.getElementById('accountIcon').onclick = transferParameters("account.html");
-</script>
+    <!--JavaScript-->
+    <script>
+        username = getParameterByKey('username');
+        if (username != null) 
+        {
+            document.getElementById('loggedIn').innerHTML = username;
+        }
+        else 
+        {
+            document.getElementById('loggedIn').innerHTML = "Not logged in";
+        }
+    </script>
+</body>
 </html>
