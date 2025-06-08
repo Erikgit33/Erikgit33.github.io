@@ -100,10 +100,9 @@ a:hover {
 }
 
 /*main*/
-
 .main {
     grid-area: main;
-    text-align: center;
+    text-align:center;
 }
 
 /*footer*/
@@ -111,7 +110,7 @@ a:hover {
 .footer {
     grid-area: footer;
     text-align: center;
-    border-top:3px solid #777;
+    border-top: 3px solid #777;
     background-color:#724F00;
 }
 

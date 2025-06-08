@@ -15,55 +15,55 @@
     <form action="../index.html" method="get">
 
         <!--info-->
-
         <div Class="username">
             <label Class="info" for="username">Username</label>
             <i Class="required">Required</i>
-            <input type="text" id="username" name="username" value="" maxlength="10" required>
+            <input type="text" id="username" name="username" maxlength="16" required>
         </div>
         <div Class="password">
             <label Class="info" for="password">Password</label>
             <i Class="required">Required</i>
-            <input type="password" id="password" name="password" value="" required>
+            <input type="password" id="password" name="password" minlength="8" required>
         </div>
         <div Class="email">
             <label Class="info" for="email">Email</label>
-            <input type="email" id="email" name="email" value="" placeholder="yourname@gmail.com">
-            <span Class="phonenumberInfo"><i>Supports any legitimate mail address</i></span>
+            <input type="email" id="email" name="email" placeholder="yourname@gmail.com">
+            <span Class="emailInfo"><i>Supports any legitimate mail address</i></span>
         </div>
         <div Class="phonenumber">
             <label Class="info" for="phonenumber">Phone Number</label>
             <p style="font-size:80%;display:inline">+</p>
             <input type="number" id="numcountry" name="numcountry" Class="tel" min="0" max="998" value="46" step="1" list="countrycodes">
             <p style="font-size:100%;display:inline">-</p>
-            <input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}" value="" placeholder="X12-345-6789">
-            <span Class="emailInfo"><i>Format: X12-345-6789</i></span>
+            <input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}" placeholder="X12-345-6789">
+            <span Class="phonenumberInfo"><i>Format: X12-345-6789</i></span>
         </div>
         <div Class="infohandling">
             <i>PetNest respects your privacy and integrity and handles the information you entrust us with with care, and will not share it with others or by other means break any laws working towards protecting said integrity.</i>
         </div>
         
+        <!--submit-->
         <div Class="submit">
         <img  Class="catImg" src="images/petNest cat.png" alt="Cat" Class="cat">
-        <input Class="submitInput" type="submit" id="submit" name="submit" value="Log in">
+        <input Class="submitInput" type="submit" id="submit" name="submit">
         </div>
 
         <!--preferences-->
-
         <div Class="preferences">
             <h1 style="margin:0;text-align:center">Preferences</h2>
 
             <label Class="preferences" for="preferenceNews">Newsletter</label>
             <input type="checkbox" id="preferenceNews" Class="prefereneNews" value="" name="preferenceNews">
             <span Class="preferences">Subscribe to our newsletter for weekly updates and offers. You will also get recommendation mails from us if we find any new products that fit your pet's or your needs!</span>
-
+            
             <label Class="preferences" for="preferencePet">Favourite Pet</label>
-            <select id="preferencePet" Class="preferencePet" value="" name="preferencePet">
+            <select id="preferencePet" Class="preferencePet" name="preferencePet">
+                <option value="none">None</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
                 <option value="rabbit">Rabbit</option>
                 <option value="other">Other</option>
-                <option value="All">All of the above</option>
+                <option value="all">All of the above</option>
             </select>
             <span Class="preferences">By telling us which pet is your favourite, we'll be able to recommend you productsts tailored specifically to your liking!</span>
 
@@ -82,24 +82,90 @@
     </form>
 
     <!--JavaScript-->
-
     <script>
         /*when entering login.html, if the user is already logged in, the 
         given values will be inputted as the user left them*/
+
+        /*if the user opens account.html for the first time (username, email etc. == null), change
+        the text of the submit button from "Log in" to "Save"*/
+        /*username*/
         username = getParameterByKey('username');
         if (username != null) {
             document.getElementById('username').value = username;
+            document.getElementById('submit').value = "Save";
         }
         else {
             document.getElementById('username').value = "";
+            document.getElementById('submit').value = "Log in";
         }
 
+        /*password*/
         password = getParameterByKey('password');
         if (password != null) {
             document.getElementById('password').value = password;
         }
         else {
             document.getElementById('password').value = "";
+        }
+
+        /*email*/
+        email = getParameterByKey('email');
+        if (email != null) {
+            document.getElementById('email').value = email;
+        }
+        else {
+            document.getElementById('email').value = "";
+        }
+
+        /*phonenumber*/
+        numcountry = getParameterByKey('numcountry');
+        if (numcountry != null) {
+            document.getElementById('numcountry').value = numcountry;
+        }
+        else {
+            document.getElementById('numcountry').value = "";
+        }
+        phonenumber = getParameterByKey('phonenumber');
+        if (phonenumber != null) {
+            document.getElementById('phonenumber').value = phonenumber;
+        }
+        else {
+            document.getElementById('phonenumber').value = "";
+        }
+        
+        /*preferenceNews*/
+        preferenceNews = getParameterByKey('preferenceNews');
+        if (preferenceNews != null) {
+            document.getElementById('preferenceNews').checked = true;
+        }
+        else {
+            document.getElementById('preferenceNews').checked = false;
+        }
+
+        /*preferencePet*/
+        preferencePet = getParameterByKey('preferencePet');
+        if (preferencePet != null) {
+            document.getElementById('preferencePet').value = preferencePet;
+        }
+        else {
+            document.getElementById('preferencePet').checked = "dog";
+        }
+
+        /*petAtHome*/
+        petAtHome = getParameterByKey('petAtHome');
+        if (petAtHome != null) {
+            document.getElementById('petAtHome').checked = true;
+        }
+        else {
+            document.getElementById('petAtHome').checked = false;
+        }
+        /*petAtHomeType*/
+        petAtHomeType = getParameterByKey('petAtHomeType');
+        if (petAtHomeType != null) {
+            document.getElementById('petAtHomeType').value = petAtHomeType;
+        }
+        else {
+            document.getElementById('petAtHomeType').value = "dog";
         }
     </script>
 </body>

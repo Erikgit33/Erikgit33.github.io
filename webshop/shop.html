@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetNest - Shop</title>
     <!--CSS-->
-    <link rel ="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop.css">
     <!--JavaScript-->
     <script src="js/index.js"></script>
     <!--From google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
+
 <body>
     <div Class="container">
         <div Class="header">
@@ -21,38 +25,44 @@
                     <circle cx="100%" cy="0" r="120" stroke="#59420b" stroke-width="3" fill="#59420b"></circle>
                 </svg>
                 <div Class="account">
-                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon" onclick="transferParameters('account.html')">
+                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon"
+                        onclick="transferParameters('account.html')">
                     <br>
                     <span Class="loggedIn" id="loggedIn"></span>
-                </div> 
+                </div>
                 <img src="images/petNest-logo.png" alt="PetNest Logo" Class="logo">
             </div>
             <h2>PetNest, for all your pet needs!</h2>
         </div>
         <div Class="nav">
-            <a href="../index.html">Home</a>
-            <a href="about-us.html">About</a>
-            <a href="shop.html" Class="shop">Shop</a>
-            <a href="contact-us.html">Contact</a>
-            <a href="account.html">Account</a>
+            <a onclick="transferParameters('../index.html')">Home</a>
+            <a onclick="transferParameters('about-us.html')">About</a>
+            <a onclick="transferParameters('shop.html')" Class="shop">Shop</a>
+            <a onclick="transferParameters('contact-us.html')">Contact</a>
+            <a onclick="transferParameters('account.html')">Account</a>
         </div>
-        <div Class="main">
-            <div Class="search"> 
-                <select Class="category" required>
+        <div Class="main" id="main">
+            <div Class="search">
+                <select Class="category" id="category">
                     <option Class="CategoryOption" value="all">All</option>
+                    <option Class="CategoryOption" value="pet">Pets</option>
                     <option Class="CategoryOption" value="dog">Dogs</option>
                     <option Class="CategoryOption" value="cat">Cats</option>
-                    <option Class="CategoryOption" value="rabbit">Birds</option>
+                    <option Class="CategoryOption" value="rabbit">Rabbits</option>
                     <option Class="CategoryOption" value="toy">Toys</option>
                     <option Class="CategoryOption" value="food">Food</option>
                     <option Class="CategoryOption" value="equipment">Equipment</option>
                 </select>
-                <input type="text" placeholder="Search for pets & products..." Class="searchBar">  
-                <span class="material-symbols-outlined" id="searchIcon">
+                <input type="text" placeholder="Search for pets & products..." Class="searchBar" id="searchBar"
+                    inputmode="search" oninput="filterProducts()">
+                <span class="material-symbols-outlined" id="searchIcon" onclick="filterProducts()">
                     search
                 </span>
             </div>
             <div Class="productContainer">
+
+                <!-- Dogs -->
+
                 <div Class="product pet dog">
                     <img src="images/pets/dogs/Doggen.png" alt="Doggen" Class="petImage">
                     <div Class="petInfo">
@@ -60,56 +70,351 @@
                         <p>Breed: Unkown</p>
                         <p>Likes: Eating poop</p>
                         <p>Age: ~4 years</p>
-                        <p>Price: $500</p>
-                        <p>Location: New York</p>
+                        <p>Price: -€5000 (yes, you get paid.)</p>
+                        <p>Location: Heby Pizzeria, Heby, Sweden.</p>
                     </div>
                     <button Class="contactSeller">Contact seller(s)</button>
                 </div>
                 <div Class="product pet dog">
-                    <img src="images/pets/dogs/akita-dog.png" alt="Akita Dog" Class="petImage dog">
+                    <img src="images/pets/dogs/akita-dog.png" alt="Akita" Class="petImage">
                     <div Class="petInfo">
-                        <h3 Class="name">Doggen</h3>
-                        <p>Breed: Unkown</p>
-                        <p>Likes: Eating poop</p>
-                        <p>Age: ~4 years</p>
-                        <p>Price: $500</p>
-                        <p>Location: New York</p>
+                        <h3 Class="name">Shaggy</h3>
+                        <p>Breed: Akita</p>
+                        <p>Likes: Going for walks, harrasing the local cat.</p>
+                        <p>Age: ~2 years</p>
+                        <p>Price: €800</p>
+                        <p>Location: BeritnelLaan, The Hauge, The Netherlands</p>
                     </div>
                     <button Class="contactSeller">Contact seller(s)</button>
                 </div>
                 <div Class="product pet dog">
-                    <img src="images/pets/dogs/american-cattle-dog.png" alt="American Cattle Dog" Class="petImage" Class="dog">
+                    <img src="images/pets/dogs/american-cattle-dog.png" alt="American Cattle Dog" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Diesel</h3>
+                        <p>Breed: American Cattle Dog</p>
+                        <p>Likes: Herding anything that moves, frisbee tricks.</p>
+                        <p>Age: ~7 years</p>
+                        <p>Price: €1500</p>
+                        <p>Location: Librijesteeg, Rotterdam, The Netherlands</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
                 </div>
                 <div Class="product pet dog">
-                    <img src="images/pets/dogs/american-foxhound.png" alt="American Foxhound" Class="petImage" Class="dog">
+                    <img src="images/pets/dogs/american-foxhound.png" alt="American Foxhound" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Woof, Bark and Sniff</h3>
+                        <p>Breed: American Foxhounds</p>
+                        <p>Likes: Cuddling, howling in unison</p>
+                        <p>Age: ~2 years, all three</p>
+                        <p>Price: €2700</p>
+                        <p>Location: Grasweg, Hamburg, Germany </p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
                 </div>
                 <div Class="product pet dog">
-                    <img src="images/pets/dogs/barbado-da-terceira.png" alt="Barbado da Terceira" Class="petImage" Class="dog">
+                    <img src="images/pets/dogs/barbado-da-terceira.png" alt="Barbado da Terceira" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Bella</h3>
+                        <p>Breed: Barbado da terceira</p>
+                        <p>Likes: Burrowing under blankets, chasing shadows.</p>
+                        <p>Age: ~5 years</p>
+                        <p>Price: €2000</p>
+                        <p>Location: Baker Street, London, United Kingdom</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
                 </div>
                 <div Class="product pet dog">
-                    <img src="images/pets/dogs/basset-hound.png" alt="Basset Hound" Class="petImage" Class="dog">
+                    <img src="images/pets/dogs/basset-hound.png" alt="Basset Hound" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Droolz</h3>
+                        <p>Breed: Basset Hound</p>
+                        <p>Likes: Napping in cool spots, slobbering on everything.</p>
+                        <p>Age: ~3 years</p>
+                        <p>Price: €900</p>
+                        <p>Location: Rue de la Paix, Paris, France</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
                 </div>
                 <div Class="product pet dog">
-                    <img src="images/pets/dogs/labrador-retriever-puppy.png" alt="Labrador Retriever" Class="petImage" Class="dog">
+                    <img src="images/pets/dogs/labrador-retriever-puppy.png" alt="Labrador Retriever" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Zoomie</h3>
+                        <p>Breed: Labrador Retriever</p>
+                        <p>Likes: Running in circles, barking at vacuum cleaners.</p>
+                        <p>Age: ~5 months</p>
+                        <p>Price: €1450</p>
+                        <p>Location: Gran Vía, Madrid, Spain</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet dog">
+                    <img src="images/pets/dogs/shiba-inu.png" alt="Shiba Inu" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Kiko</h3>
+                        <p>Breed: Shiba Inu</p>
+                        <p>Likes: Climbing furniture, howling at sirens.</p>
+                        <p>Age: ~1 year</p>
+                        <p>Price: €980</p>
+                        <p>Location: Rue de Rivoli, Paris, France</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet dog">
+                    <img src="images/pets/dogs/border-collie.png" alt="Border Collie" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Skye</h3>
+                        <p>Breed: Border Collie</p>
+                        <p>Likes: Herding kids, chasing frisbees.</p>
+                        <p>Age: ~2.5 years</p>
+                        <p>Price: €1350</p>
+                        <p>Location: Grafton Street, Dublin, Ireland</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+
+                <!-- Cats -->
+
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/maine-coon.png" alt="Maine Coon" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Whiskers</h3>
+                        <p>Breed: Maine Coon</p>
+                        <p>Likes: Sleeping in sinks, head boops.</p>
+                        <p>Age: ~3 years</p>
+                        <p>Price: €1200</p>
+                        <p>Location: Via del Corso, Rome, Italy</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/siamese.png" alt="Siamese" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Luna</h3>
+                        <p>Breed: Siamese</p>
+                        <p>Likes: Talking loudly, sunbathing.</p>
+                        <p>Age: ~2 years</p>
+                        <p>Price: €1050</p>
+                        <p>Location: Königsallee, Düsseldorf, Germany</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/bengal.png" alt="Bengal" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Zara</h3>
+                        <p>Breed: Bengal</p>
+                        <p>Likes: Climbing curtains, laser pointers.</p>
+                        <p>Age: ~1.5 years</p>
+                        <p>Price: €1550</p>
+                        <p>Location: Calle Larios, Málaga, Spain</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/persian.png" alt="Persian" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Mochi</h3>
+                        <p>Breed: Persian</p>
+                        <p>Likes: Being brushed, sitting in laps.</p>
+                        <p>Age: ~4 years</p>
+                        <p>Price: €980</p>
+                        <p>Location: Váci utca, Budapest, Hungary</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/scottish-fold.png" alt="Scottish Fold" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Beans</h3>
+                        <p>Breed: Scottish Fold</p>
+                        <p>Likes: Boxes, watching birds from windows.</p>
+                        <p>Age: ~2.5 years</p>
+                        <p>Price: €1120</p>
+                        <p>Location: Istiklal Avenue, Istanbul, Turkey</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/siberian.png" alt="Siberian" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Frost</h3>
+                        <p>Breed: Siberian</p>
+                        <p>Likes: Snow, belly rubs (on good days).</p>
+                        <p>Age: ~3 years</p>
+                        <p>Price: €1300</p>
+                        <p>Location: Nevsky Prospect, Saint Petersburg, Russia</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/abyssinian.png" alt="Abyssinian" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Nyla</h3>
+                        <p>Breed: Abyssinian</p>
+                        <p>Likes: Jumping on shelves, purring nonstop.</p>
+                        <p>Age: ~1 year</p>
+                        <p>Price: €990</p>
+                        <p>Location: Oxford Street, London, UK</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet cat">
+                    <img src="images/pets/cats/turkish-van.png" alt="Turkish Van" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Casper</h3>
+                        <p>Breed: Turkish Van</p>
+                        <p>Likes: Swimming in bathtubs, chasing toys.</p>
+                        <p>Age: ~2 years</p>
+                        <p>Price: €1020</p>
+                        <p>Location: Drottninggatan, Stockholm, Sweden</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+
+                <!-- Rabbits -->
+
+                <div Class="product pet rabbit">
+                    <img src="images/pets/rabbits/netherland-dwarf.png" alt="Netherland Dwarf" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Binky</h3>
+                        <p>Breed: Netherland Dwarf</p>
+                        <p>Likes: Hopping in circles, chewing cardboard.</p>
+                        <p>Age: ~8 months</p>
+                        <p>Price: €450</p>
+                        <p>Location: Avenida Paulista, São Paulo, Brazil</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+
+                <div Class="product pet rabbit">
+                    <img src="images/pets/rabbits/flemish-giant.png" alt="Flemish Giant" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Tank</h3>
+                        <p>Breed: Flemish Giant</p>
+                        <p>Likes: Lounging in the shade, nibbling veggies.</p>
+                        <p>Age: ~2 years</p>
+                        <p>Price: €600</p>
+                        <p>Location: Robson Street, Vancouver, Canada</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+
+                <div Class="product pet rabbit">
+                    <img src="images/pets/rabbits/mini-lop.png" alt="Mini Lop" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Teddy</h3>
+                        <p>Breed: Mini Lop</p>
+                        <p>Likes: Digging in blankets, cuddling up.</p>
+                        <p>Age: ~1 year</p>
+                        <p>Price: €500</p>
+                        <p>Location: Karl Johans gate, Oslo, Norway</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet rabbit">
+                    <img src="images/pets/rabbits/lionhead.png" alt="Lionhead" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Fluff</h3>
+                        <p>Breed: Lionhead</p>
+                        <p>Likes: Zooming around, being brushed.</p>
+                        <p>Age: ~9 months</p>
+                        <p>Price: €520</p>
+                        <p>Location: Istikal Street, Ankara, Turkey</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
+                </div>
+                <div Class="product pet rabbit">
+                    <img src="images/pets/rabbits/english-spot.png" alt="English Spot" Class="petImage">
+                    <div Class="petInfo">
+                        <h3 Class="name">Dotty</h3>
+                        <p>Breed: English Spot</p>
+                        <p>Likes: Running through tunnels, chewing hay.</p>
+                        <p>Age: ~1.5 years</p>
+                        <p>Price: €480</p>
+                        <p>Location: Andrassy Avenue, Budapest, Hungary</p>
+                    </div>
+                    <button Class="contactSeller">Contact seller(s)</button>
                 </div>
             </div>
+
+            <div Class="noProductBanner" id="noProductBanner">
+                <h3>Oh... That doesn't seem to be available right now, sorry!</h3>
+            </div>
+
         </div>
         <div Class="footer">
             <p>&copy; 2025 PetNest. All rights reserved.</p>
         </div>
     </div>
+
+    <!--JavaScript-->
+    <script>
+        username = getParameterByKey('username');
+        if (username != null && username != "") {
+            document.getElementById('loggedIn').innerHTML = username;
+        }
+        else {
+            document.getElementById('loggedIn').innerHTML = "Not logged in";
+        }
+
+        // Search functionality
+        const category = document.getElementById('category');
+        category.addEventListener("change", filterProducts);
+        const noProductBanner = document.getElementById('noProductBanner');
+
+        function filterProducts() {
+            const searchBar = document.getElementById('searchBar');
+            const products = document.querySelectorAll('.product');
+
+            const selectedCategory = category.value.toLowerCase();
+            console.log("Selected category:", selectedCategory);
+            const search = searchBar && searchBar.value ? searchBar.value.trim().toLowerCase() : "";
+            console.log("Search term:", search);
+
+            products.forEach(product => {
+                const type = product.className.split(' ')[1]; // Get the second class which is the type (e.g., 'pet, 'food', 'equipment')
+                const petType = product.className.split(' ')[2]; // Get the third class which is the pet type (e.g.,'dog', 'cat')
+                const name = product.querySelector('.name').textContent.toLowerCase();
+
+                if (type == selectedCategory || petType == selectedCategory || selectedCategory == 'all') {
+                    if (search != "" && name.includes(search)) {
+                        product.style.display = 'block';
+                        console.log("Displaying product:", name, "of type:", type + ", " + petType);
+                    }
+                    else if (search != "" && search == type || search == petType) {
+                        product.style.display = 'block';
+                        console.log("Displaying product:", name, "of type:", type + ", " + petType);
+                    }
+                    else if (search == "") {
+                        product.style.display = 'block';
+                        console.log("Displaying product:", name, "of type:", type + ", " + petType);
+                    }
+                    else {
+                        product.style.display = 'none';
+                    }
+                }
+                else {
+                    product.style.display = 'none';
+                }
+            });
+
+            let noProductVisible = true;
+            products.forEach(product => {
+                if (product.style.display != 'none') {
+                    noProductVisible = false;
+                    console.log("Atleast one product is displayed");
+                }
+            });
+            if (noProductVisible) {
+                noProductBanner.style.display = 'block';
+                console.log("No products available, displaying banner")
+            }
+            else {
+                noProductBanner.style.display = 'none'
+                console.log("Products available, not displaying banner");
+            }
+        }
+    </script>
 </body>
-    
-<!--JavaScript-->
-<script>
-    username = getParameterByKey('username');
-    if (username != null && username != "")
-    {
-        document.getElementById('loggedIn').innerHTML = username;
-    }
-    else 
-    {
-        document.getElementById('loggedIn').innerHTML = "Not logged in";
-    }
-</script>
+
 </html>

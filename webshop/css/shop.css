@@ -118,6 +118,9 @@ select.category {
 option.categoryOption {
     font-size:90%;
 }
+
+
+
 .searchBar {
     margin:15px;
     margin-top:25px;
@@ -153,13 +156,16 @@ div.product {
     border-radius:15px;
     background-color:#eee;
     text-align:center;
+    transition: transform 0.3s ease-in-out;
 
-    width:fit-content;
-    height:fit-content;
+    max-height: 350px;
+    overflow-y: scroll;
+
+    -ms-overflow-style: none; /*IE and Edge, others*/
+    scrollbar-width: none; /*newly added, may not be avaiable*/
 }
-div.pet:hover {
+div.product:hover {
     transform: scale(1.05);
-    transition: transform 0.2s;
 }
 img.petImage {
     border-bottom:5px solid #555; 
@@ -186,6 +192,14 @@ button.contactSeller {
 button.contactSeller:hover {
     background-color: #555;
     color:#ddd;
+}
+div.noProductBanner {
+    text-align:center;
+    text-decoration-line:underline;
+    display:none;
+}
+div.noProductBanner h3 {
+    margin-top:0;
 }
 
 /*footer */

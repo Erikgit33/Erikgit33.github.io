@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetNest - Contact us</title>
     <!--CSS-->
-    <link rel ="stylesheet" href="css/contact-us.css">
+    <link rel="stylesheet" href="css/contact-us.css">
     <!--JavaScript-->
     <script src="js/index.js"></script>
     <!--From google fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <div Class="container">
@@ -20,23 +22,52 @@
                     <circle cx="100%" cy="0" r="120" stroke="#59420b" stroke-width="3" fill="#59420b"></circle>
                 </svg>
                 <div Class="account">
-                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon" onclick="transferParameters('account.html')">
+                    <img src="images/account-circle.png" alt="Account Icon" Class="accountIcon" id="accountIcon"
+                        onclick="transferParameters('account.html')">
                     <br>
                     <span Class="loggedIn" id="loggedIn"></span>
-                </div> 
+                </div>
                 <img src="images/petNest-logo.png" alt="PetNest Logo" Class="logo">
             </div>
             <h2>PetNest, for all your pet needs!</h2>
         </div>
         <div Class="nav">
-            <a href="../index.html">Home</a>
-            <a href="about-us.html">About</a>
-            <a href="shop.html" Class="shop">Shop</a>
-            <a Class="contact-us" href="contact-us.html">Contact</a>
-            <a href="account.html">Account</a>
+            <a onclick="transferParameters('../index.html')">Home</a>
+            <a onclick="transferParameters('about-us.html')">About</a>
+            <a onclick="transferParameters('shop.html')" Class="shop">Shop</a>
+            <a onclick="transferParameters('contact-us.html')" Class="contact-us">Contact</a>
+            <a onclick="transferParameters('account.html')">Account</a>
         </div>
         <div Class="main">
-            <p>Contact petNest</p>
+            <h2>Contact Us</h2>
+            <p>
+                We're here to help—because your pet's happiness is our priority!🐾 <br><br>
+                At PetNest, we love hearing from our customers. Whether you have a question about our products, need
+                help with an order, or just want to share a cute story about your furry friend, don’t hesitate to reach
+                out.
+                <br>
+                <br>
+                How to get in touch with us:
+                <br>
+                <br>
+                📧 Email: support@petnest.com <br>
+                📞 Phone: +1 (800) 555-PAWS (7297) <br>
+                📍 Address: 123 PetNest Lane, Tailtown, PA 19000 <br>
+                🕒 Customer Service Hours: Monday–Friday, 9am–5pm (EST) <br>
+                <br>
+                Our social media:
+                <br>
+                <br> 
+                Instagram: @PetNest-Official
+                <br>
+                Facebook: @PetNestUSA
+                <br>
+                Youtube: PetNest- Pet stories
+                <br>
+                <br>
+                <br>
+                Thanks for being part of the PetNest family!
+            </p>
         </div>
         <div Class="footer">
             <p>&copy; 2025 PetNest. All rights reserved.</p>
@@ -46,14 +77,13 @@
     <!--JavaScript-->
     <script>
         username = getParameterByKey('username');
-        if (username != null) 
-        {
+        if (username != null) {
             document.getElementById('loggedIn').innerHTML = username;
         }
-        else 
-        {
+        else {
             document.getElementById('loggedIn').innerHTML = "Not logged in";
         }
     </script>
 </body>
+
 </html>
